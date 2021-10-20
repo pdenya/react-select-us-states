@@ -3,6 +3,33 @@ React Select US States
 
 React HTML Select component for US State Selection.
 
+
+## Updates on this fork
+
+- Now a controlled element (pass value)
+- Placeholder available (no longer defaults to Alabama)
+- Element Name provided in callback
+
+## Updated Usage
+
+```javascript
+// with name and placeholder
+<SelectUSState
+    name="us_state"
+    value={this.state.us_state}
+    className="myClassName"
+    placeholder="- Select US State -"
+    onChange={(new_state_abbr, field_name) => this.setState({ [field_name]: new_state_abbr })} />
+
+// with no placeholder defaults to alabama
+// with no name, only value is provided
+<SelectUSState
+    value={this.state.us_state}
+    onChange={(new_state_abbr) => this.setState({ us_state: new_state_abbr })} />
+```
+
+# Original README:
+
 ## Installation
 
 The package can be installed via NPM:
